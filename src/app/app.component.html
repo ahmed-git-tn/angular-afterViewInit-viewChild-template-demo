@@ -1,0 +1,17 @@
+<p #paragraphe>Hello</p>
+
+<p *ngIf="false; else myTemplate">if is true</p>
+
+<!--
+  Notez que si vous encapsulez du contenu dans un <ng-template> sans demander à Angular de le rendre, 
+    ce contenu n'apparaîtra pas sur une page
+-->
+<!--
+   ng-template :
+   is a virtual element and its contents are displayed only when needed
+   should be used along with structural directives like [ngIf],[ngFor],[NgSwitch] 
+
+-->
+<ng-template #myTemplate>
+  <p>Else works</p>
+</ng-template>
